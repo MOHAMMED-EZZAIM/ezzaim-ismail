@@ -13,11 +13,7 @@ export class AppHtppEzInterceptor implements HttpInterceptor {
 
   constructor(private authService: AuthService) {}
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-<<<<<<< HEAD
-    if(!request.url.includes("/login") && !request.url.includes("/user")&& !request.url.includes("/api/propAppartement/")&& !request.url.includes("/api/agenceLocation/")){
-=======
-    if(!request.url.includes("/login") && !request.url.includes("/api/client/")){
->>>>>>> a037c8adb055cf55ab5de2502abbe117127c5ab5
+    if(!request.url.includes("/login") && !request.url.includes("/user")&& !request.url.includes("/api/propAppartement/")&& !request.url.includes("/api/agenceLocation/")&& !request.url.includes("/api/client/")){
       let newrrequest=request.clone({
         headers : request.headers.set('Authorization','Bearer '+this.authService.accessToken)
       })

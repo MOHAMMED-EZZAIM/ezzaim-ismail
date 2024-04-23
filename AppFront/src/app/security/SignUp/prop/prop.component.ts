@@ -1,11 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Appartement} from "../../../sahred/model/appartemetModel/appartement.model";
-import {CategoriesAppartement} from "../../../sahred/model/appartemetModel/categories-appartement.model";
-import {PropAppartement} from "../../../sahred/model/appartemetModel/prop-appartement.model";
-import {AppartemetService} from "../../../sahred/service/appartemetService/appartemet.service";
-import {CategoriesAppartementService} from "../../../sahred/service/appartemetService/categories-appartement.service";
 import {PropAppartementService} from "../../../sahred/service/appartemetService/prop-appartement.service";
-import {error} from "@angular/compiler-cli/src/transformers/util";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
 

@@ -1,7 +1,6 @@
 import { AgenceLocation } from "../voitureModel/agence-location.model";
 import { PropAppartement } from "../appartemetModel/prop-appartement.model";
 import { Reservation } from "./reservation.model";
-import { AppUser } from "../../../security/bean/app-user.model";
 
 export class Client {
   cin: string;
