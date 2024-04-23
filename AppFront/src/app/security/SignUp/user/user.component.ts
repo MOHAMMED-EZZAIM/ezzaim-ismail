@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
-import {AuthService} from "../serviceAuth/auth.service";
+import {AuthService} from "../../serviceAuth/auth.service";
 
 @Component({
   selector: 'app-creer-compte',
-  templateUrl: './creer-compte.component.html',
-  styleUrls: ['./creer-compte.component.css']
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class CreerCompteComponent implements OnInit {
+export class UserComponent implements OnInit {
   searchFormGroup! : FormGroup;
   constructor(private fb : FormBuilder,private authService:AuthService,private  router:Router) { }
 

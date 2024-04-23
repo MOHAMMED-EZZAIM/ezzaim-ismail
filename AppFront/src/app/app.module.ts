@@ -43,14 +43,16 @@ import { CreatVoitureComponent } from './view/voitureComponent/voiture/creat-voi
 import { EditVoitureComponent } from './view/voitureComponent/voiture/edit-voiture/edit-voiture.component';
 import { ListVoitureComponent } from './view/voitureComponent/voiture/list-voiture/list-voiture.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {LoginComponent} from "./security/login/login.component";
-import {CreerCompteComponent} from "./security/creer-compte/creer-compte.component";
+import {LoginComponent} from "./security/SignIn/login/login.component";
+import {UserComponent} from "./security/SignUp/user/user.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NavbarComponent} from "./security/navbar/navbar.component";
 import {NoteAuthorizedComponent} from "./security/note-authorized/note-authorized.component";
 import {AdminTemplateComponent} from "./security/admin-template/admin-template.component";
 import {AuthService} from "./security/serviceAuth/auth.service";
 import {AppHtppEzInterceptor} from "./security/interceptors/app-htpp-ez.interceptor";
+import { PropComponent } from './security/SignUp/prop/prop.component';
+import { AgenceComponent } from './security/SignUp/agence/agence.component';
 
 @NgModule({
   declarations: [
@@ -95,10 +97,12 @@ import {AppHtppEzInterceptor} from "./security/interceptors/app-htpp-ez.intercep
     EditVoitureComponent,
     ListVoitureComponent,
     LoginComponent,
-    CreerCompteComponent,
+    UserComponent,
     NavbarComponent,
     NoteAuthorizedComponent,
-    AdminTemplateComponent
+    AdminTemplateComponent,
+    PropComponent,
+    AgenceComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {CreerCompteComponent} from "./security/creer-compte/creer-compte.component";
-import {LoginComponent} from "./security/login/login.component";
+import {UserComponent} from "./security/SignUp/user/user.component";
+import {LoginComponent} from "./security/SignIn/login/login.component";
 import {
   CreatAppartemetComponent
 } from "./view/appartemetComponent/appartemet/creat-appartemet/creat-appartemet.component";
@@ -16,11 +16,15 @@ import {
 import {ListAppartemetComponent} from "./view/appartemetComponent/appartemet/list-appartemet/list-appartemet.component";
 import {AuthenticationGuard} from "./security/guards/authentication.guard";
 import {AuthorizationGuard} from "./security/guards/authorization.guard";
+import {PropComponent} from "./security/SignUp/prop/prop.component";
+import {AgenceComponent} from "./security/SignUp/agence/agence.component";
 
 const routes: Routes = [
 
   { path :"login", component : LoginComponent},
-  { path :"creercompte", component : CreerCompteComponent},
+  { path :"creercompte", component : UserComponent},
+  { path :"prop", component : PropComponent},
+  { path :"agence", component : AgenceComponent},
   { path :"", redirectTo:"/login",pathMatch:"full"},
 
   { path :"admin",component:AdminTemplateComponent,children:[
