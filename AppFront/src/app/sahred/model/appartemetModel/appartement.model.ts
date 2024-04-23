@@ -7,7 +7,7 @@ export class Appartement {
   superficie: number;
   adresse: string;
   loyerMensuel: number;
-  reservationDto: Reservation;
+  reservationDto: Reservation[];
   categoriesAppartementDto: CategoriesAppartement;
   propAppartemenetDto: PropAppartement;
   constructor() {
@@ -15,7 +15,7 @@ export class Appartement {
     this.superficie = 0;
     this.adresse = "";
     this.loyerMensuel = 0;
-    this.reservationDto = {};
+    this.reservationDto = [];
     this.categoriesAppartementDto = {
       libelle:""
     };

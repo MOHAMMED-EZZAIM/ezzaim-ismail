@@ -5,6 +5,7 @@ import {jwtDecode} from "jwt-decode";
 import {Router} from "@angular/router";
 import {AppUser} from "../bean/app-user.model";
 import {isPlatformBrowser} from "@angular/common";
+import {Client} from "../../sahred/model/communModel/client.model";
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,8 @@ export class AuthService {
 
   accessTokenEz! : any ;
   userApp :AppUser=new AppUser();
+
+  client:Client=new Client();
   // refrechToken! :any;
   constructor(private http: HttpClient,private router:Router,@Inject(PLATFORM_ID) private platformId: Object) { }
 
@@ -42,10 +45,9 @@ export class AuthService {
 
     // @ts-ignore
     let decodejwt = jwtDecode(this.accessToken) as { sub: string, authority: string };
-    console.log(decodejwt)
     this.username=decodejwt.sub;
-    console.log(this.username)
     this.roles=decodejwt.authority
+    console.log(this.roles)
 
     window.localStorage.setItem("jwt-token-access",this.accessToken);
     // window.localStorage.setItem("jwt-token-ref",this.refrechToken);
@@ -87,11 +89,9 @@ export class AuthService {
   //
   //   }
   // }
-  creeCompte(username: any, password: any) {
-    this.userApp.username=username;
-    this.userApp.password=password;
-    console.log(this.userApp)
-    return  this.http.post<AppUser>("http://localhost:8085/user",this.userApp)
-  }
 
+  creeCompte(client:Client){
+    console.log(this.client)
+    return  this.http.post<number>("http://localhost:8085/api/client/",client)
+  }
 }
