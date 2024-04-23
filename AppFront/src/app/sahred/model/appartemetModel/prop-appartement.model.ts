@@ -7,7 +7,7 @@ export class PropAppartement {
   numCompteBkPropApp: string;
   cin: string;
   usernamePropAppt: string;
-  password:String
+  password:string;
   constructor() {
     this.nom = "";
     this.prenom = "";
@@ -17,6 +17,6 @@ export class PropAppartement {
     this.numCompteBkPropApp = "";
     this.cin = "";
     this.usernamePropAppt = "";
-    this.password=""
+    this.password="";
   }
 }
