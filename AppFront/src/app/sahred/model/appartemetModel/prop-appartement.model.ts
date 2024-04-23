@@ -6,7 +6,7 @@ export class PropAppartement {
   ribPropAppt: string;
   numCompteBkPropApp: string;
   cin: string;
-  usernamePropAppt: string;
+  username: string;
   password:string;
   constructor() {
     this.nom = "";
@@ -16,7 +16,7 @@ export class PropAppartement {
     this.ribPropAppt = "";
     this.numCompteBkPropApp = "";
     this.cin = "";
-    this.usernamePropAppt = "";
+    this.username = "";
     this.password="";
   }
 }

@@ -3,6 +3,7 @@ import { PropAppartement } from '../../model/appartemetModel/prop-appartement.mo
 import {Appartement} from "../../model/appartemetModel/appartement.model";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {AppUser} from "../../../security/bean/app-user.model";
 
 @Injectable({
   providedIn: 'root'
@@ -74,5 +75,15 @@ export class PropAppartementService {
 
   set appartemetsByCin(value: Array<Appartement>) {
     this._appartemetsByCin = value;
+  }
+
+
+
+  creeCompte(cin:any,username: any, password: any):Observable<any> {
+    this.item.cin=cin;
+    this.item.username=username;
+    this.item.password=password;
+    console.log(this.item)
+    return  this.http.post<any>("http://localhost:8085/api/propAppartement/", this.item)
   }
 }

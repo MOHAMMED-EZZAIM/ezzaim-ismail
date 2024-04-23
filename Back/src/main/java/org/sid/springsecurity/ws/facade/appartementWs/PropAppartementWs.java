@@ -14,10 +14,7 @@ import java.util.List;
 public class PropAppartementWs {
     //mohammed  ezzaim
     @PostMapping
-<<<<<<< HEAD
-//    @PostAuthorize("hasAnyAuthority('ADMIN')")
-=======
->>>>>>> 57130caec2ddaab48f6080e92c5dce4fc0648605
+
     public int save(@RequestBody PropAppartement appartement) {
         return propAppartementService.save(appartement);
     }
