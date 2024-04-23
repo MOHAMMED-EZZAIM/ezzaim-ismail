@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
 import {AuthService} from "../../serviceAuth/auth.service";
+import {Client} from "../../../sahred/model/communModel/client.model";
 
 @Component({
   selector: 'app-creer-compte',
@@ -10,12 +11,15 @@ import {AuthService} from "../../serviceAuth/auth.service";
 })
 export class UserComponent implements OnInit {
   searchFormGroup! : FormGroup;
+
+
   constructor(private fb : FormBuilder,private authService:AuthService,private  router:Router) { }
 
   ngOnInit(): void {
     this.searchFormGroup=this.fb.group({
       username : this.fb.control(""),
       password : this.fb.control(""),
+      cin : this.fb.control(""),
     });
   }
 
@@ -23,16 +27,19 @@ export class UserComponent implements OnInit {
   protected readonly FormGroup = FormGroup;
 
   creeCompt() {
-    let username=this.searchFormGroup.value.username;
-    let password=this.searchFormGroup.value.password;
-    console.log(username)
-    console.log(password)
-    this.authService.creeCompte(username,password).subscribe(
+    this.authService.client.cin=this.searchFormGroup.value.cin;
+    this.authService.client.username_Client=this.searchFormGroup.value.username;
+    this.authService.client.password_Client=this.searchFormGroup.value.password;
+
+    console.log(this.authService.client)
+    this.authService.creeCompte(this.authService.client).subscribe(
       {
         next:data=>{
+          console.log(data)
           this.router.navigateByUrl("/login")
-        },error:err => {
-          console.log("error")
+        }
+        ,error:err => {
+          console.log("error ezzaim")
         }
       }
     );

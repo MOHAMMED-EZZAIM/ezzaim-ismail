@@ -5,7 +5,6 @@ import {LoginComponent} from "./security/SignIn/login/login.component";
 import {
   CreatAppartemetComponent
 } from "./view/appartemetComponent/appartemet/creat-appartemet/creat-appartemet.component";
-import {NavbarComponent} from "./security/navbar/navbar.component";
 import {AdminTemplateComponent} from "./security/admin-template/admin-template.component";
 import {
   CreatCategoriesAppartementComponent
@@ -14,8 +13,6 @@ import {
   CreatPropAppartementComponent
 } from "./view/appartemetComponent/propAppartement/creat-prop-appartement/creat-prop-appartement.component";
 import {ListAppartemetComponent} from "./view/appartemetComponent/appartemet/list-appartemet/list-appartemet.component";
-import {AuthenticationGuard} from "./security/guards/authentication.guard";
-import {AuthorizationGuard} from "./security/guards/authorization.guard";
 import {PropComponent} from "./security/SignUp/prop/prop.component";
 import {AgenceComponent} from "./security/SignUp/agence/agence.component";
 
