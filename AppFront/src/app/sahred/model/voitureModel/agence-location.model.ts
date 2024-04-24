@@ -13,20 +13,20 @@ export class AgenceLocation {
   password: string;
   RCAgLoc: number;
   voitureDtos: Voiture;
-  clientDtos: Client;
+  clientDtos: Client[];
   paiementDtos: Paiement;
 
   constructor() {
     this.iceAgLoc = 0;
-    this.raisonSocialAg = "";
-    this.adresse = "";
+    this.raisonSocialAg = '';
+    this.adresse = '';
     this.numTelephone = 0;
     this.numCompteBkAgLoc = 0;
-    this.usernameAgenceLoc = "";
-    this.password = "";
+    this.usernameAgenceLoc = '';
+    this.password = '';
     this.RCAgLoc = 0;
-    this.voitureDtos = [];
-    this.clientDtos = new Client();
-    this.paiementDtos =[];
+    this.voitureDtos = new Voiture();
+    this.clientDtos = [];
+    this.paiementDtos = new Paiement();
   }
 }

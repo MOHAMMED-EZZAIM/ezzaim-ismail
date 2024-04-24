@@ -22,7 +22,7 @@ export class Client {
     this.username_Client = '';
     this.password_Client='';
       this.email_Client='';
-    this.agenceLocation = new AgenceLocation();
+    this.agenceLocation =new AgenceLocation();
     this.propAppartemenetDto = new PropAppartement();
     this.reservationDto = [];
   }

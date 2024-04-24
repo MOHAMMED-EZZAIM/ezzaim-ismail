@@ -35,8 +35,10 @@ public class SpringSecurityApplication {
             accountService.addNewUser(new AppUser(null,"admin","admin",new ArrayList<>()));
 
 
-            accountService.addRoleToUser("admin","USER");
             accountService.addRoleToUser("admin","ADMIN");
+            accountService.addRoleToUser("admin","MANAGER-APT");
+            accountService.addRoleToUser("admin","MANAGER-VOI");
+            accountService.addRoleToUser("admin","USER");
 
         };
     }
